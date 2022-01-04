@@ -1,24 +1,34 @@
-# README
+# Kidsママ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+忙しい主婦が、日常の洗い物や洗濯ものをたたむなどの、家事を子供に手伝ってもらうことで楽になり、
+お手伝いごとに獲得できるポイント数を決めて、ご褒美のポイントに合計のポイント数が到達したときに、
+子供にご褒美を買ってあげる、子供も楽しくて、主婦も楽ができるサイト。
 
-Things you may want to cover:
+### サイトテーマ
+家族で楽しくお手伝い
 
-* Ruby version
+### テーマを選んだ理由
+身近なところで、大変なことや不便なところを考えた時に、主婦の方の家事が大変だということが多いと思ったので、
+家族で子供にただ手伝ってもらうのも、楽しくないし、気が乗らないと思ったので、家族で子供も楽しく手伝いができて、
+主婦の方も楽ができるようなサイトがあれば便利だと思い、このテーマにしました。
 
-* System dependencies
+### ターゲットユーザ
+小さい子供がいて、共働きなどで、家事が忙しい主婦
 
-* Configuration
+### 主な利用シーン
+共働きで仕事から帰ってきて時間があまりないときに、簡単な家事などを子供に手伝ってもらいたいときなど。
 
-* Database creation
+## 設計書
 
-* Database initialization
 
-* How to run the test suite
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1RQGnPauLfso_hrKEMNJYh2bs7DQIonqLU1Q2I72pTws/edit?usp=sharing
 
-* Services (job queues, cache servers, search engines, etc.)
+## 開発環境
+* OS：Amazon Linux 2
+* 言語：HTML,CSS,JavaScript,Ruby,SQL
+* フレームワーク：Ruby on Rails
+* JSライブラリ：jQuery
+* IDE：Cloud9
 
-* Deployment instructions
-
-* ...
