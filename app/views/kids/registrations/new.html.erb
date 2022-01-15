@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>キッズ部屋をつくる！</h2>
+  <div class="col-8">
+
+    <%= form_with model: @kid, url: kid_registration_path, local: true do |f| %>
+      <%= render "kids/shared/error_messages", resource: resource %>
+    <table>
+      <tbody>
+        <tr>
+          <td>なまえ</td>
+          <td>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ぱすわーど
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> 文字以上)</em>
+            <% end %>
+          </td>
+          <td>
+            <%= f.password_field :password, autocomplete: "new-password" %>
+          </td>
+        </tr>
+        <tr>
+          <td>ぱすわーど(もう一度)</td>
+          <td>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <%= f.submit "部屋をつくる!", class: "btn btn-success" %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>
