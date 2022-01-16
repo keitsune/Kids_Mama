@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root 'homes#top'
 
   scope module: :public do
-
+    resource :kids, only: [:show, :edit, :update, :unsubscribe, :withdraw]
+    get "kids/unsubscribe" => "kids#unsubscribe"
+    patch "kids/withdraw" => "kids#withdraw"
+    put "kids/withdraw" => "kids#withdraw"
   end
 
 

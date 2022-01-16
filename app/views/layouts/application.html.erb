@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <header>
+      <% if kid_signed_in? %>
+      <li>
+        <%= link_to "ログアウト", destroy_kid_session_path, method: :delete %>
+      </li>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>

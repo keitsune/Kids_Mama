@@ -34,6 +34,8 @@ class DeviseCreateKids < ActiveRecord::Migration[5.2]
 
       t.string :name
 
+
+
       t.timestamps null: false
     end
 

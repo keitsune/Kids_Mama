@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>キッズ部屋へんこう</h2>
+  <div class="col-8 d-flex justify-content-center">
+    <%= form_with model: @kid, url: kids_path, local: true do |f| %>
+    <table>
+      <tbody>
+        <tr>
+          <td>アイコン</td>
+          <td>
+            <%= f.attachment_field :image %>
+          </td>
+        </tr>
+        <tr>
+          <td>なまえ</td>
+          <td>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <%= f.submit "へんこう", class: "btn btn-success" %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <%= link_to kids_unsubscribe_path do %>
+              <%= f.submit "部屋を退室する", class: "btn btn-danger" %>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>

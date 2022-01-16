@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>キッズ部屋</h2>
+  <div class="row">
+    <div class="col-sm-5 d-flex justify-content-center">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <%= attachment_image_tag @kid, :image_id, fallback: "no_image.jpg", size: "100x100"%>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= @kid.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= link_to edit_kids_path do %>
+                <button class="btn btn-success">へんこう</button>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-7 d-flex justify-content-center">
+      <table>
+        <tbody>
+          <tr>
+            <td>もっているポイント</td>
+            <td>
+              <%= @kid.points %>ポイント
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 d-flex justify-content-center">
+      <div>
+        <h2>本当に退室しますか？</h2>
+      </div>
+      <div>
+        <p>
+          退室すると、これまでのお手伝いでためたポイントや
+          </br>
+          達成したごほうびのりれきなどもなくなってしまいます。
+          </br>
+          退室する場合は「退室する」をおしてください。
+        </p>
+      </div>
+    </div>
+    <div class="col-8 d-flex justify-content-between">
+      <div>
+        <%= link_to kids_path do %>
+          <button class="btn btn-primary">退室しない</button>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to kids_withdraw_path, method: :patch, data: { confilm: "本当に退会しますか？" } do %>
+          <button class="btn btn-danger">退室する</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
