@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>キッズ情報</h2>
+  <div class="row">
+    <div class="col-6">
+      <table>
+        <tbody>
+          <tr>
+            <td>なまえ</td>
+            <td>
+              <%= @kid.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>もっているポイント</td>
+            <td>
+              <% if @kid.points.present? %>
+                <%= @kid.points %>ポイント
+              <% else %>
+                0ポイント
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4">
+      <%= attachment_image_tag @kid, :image, format: 'jpeg', size: "200x200", fallback: "no_image.jpg" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-between">
+      <div class="col">
+        <button class="btn btn-success">ごほうびりれき</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-success">おてつだいりれき</button>
+      </div>
+    </div>
+  </div>
+</div>

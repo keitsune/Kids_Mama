@@ -1,3 +1,9 @@
+<% if flash[:alert].present? %>
+  <div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"></span>
+    <%= flash[:alert] %>
+  </div>
+<% end %>
 <div class="container">
   <h2>ママの部屋(ログイン)</h2>
   <div class="col-8">
