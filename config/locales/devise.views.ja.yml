@@ -33,6 +33,7 @@ ja:
         email: めーるあどれす
         password: ぱすわーど
         name: なまえ
+        password_confirmation: 確認ぱすわーど
     models:
       user: ユーザー
       kid: キッズ部屋
@@ -56,6 +57,8 @@ ja:
             password:
               blank: が入力されていません
               too_short: は6文字以上です
+            password_confirmation:
+              confirmation: が一致しません
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

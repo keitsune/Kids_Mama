@@ -1,5 +1,5 @@
 class Public::KidsController < ApplicationController
-  before_action :authenticate_kid!
+  before_action :authenticate_user
   def show
     @kid = current_kid
   end

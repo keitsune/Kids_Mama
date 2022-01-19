@@ -15,6 +15,10 @@
       <li>
         <%= link_to "ログアウト", destroy_kid_session_path, method: :delete %>
       </li>
+      <% elsif admin_signed_in?%>
+      <li>
+        <%= link_to "ログアウト", destroy_kid_session_path, method: :delete %>
+      </li>
       <% end %>
     </header>
     <%= yield %>

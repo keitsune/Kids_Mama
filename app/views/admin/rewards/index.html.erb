@@ -1,0 +1,25 @@
+<div class="col-8 d-flex justify-content-between">
+  <div>
+    <h2>ごほうびリスト</h2>
+  </div>
+  <div>
+    <%= link_to new_admin_reward_path do %>
+      <button class="btn btn-success">ごほうび追加</button>
+    <% end %>
+  </div>
+</div>
+<div class="reward-wrap">
+  <% @rewards.each do |reward| %>
+  <div class="reward-box">
+    <%= attachment_image_tag reward, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
+    <div>
+      <%= link_to admin_reward_path(reward) do %>
+        <%= reward.title %>
+      <% end %>
+    </div>
+    <div>
+      <%= reward.total_point %>ポイント
+    </div>
+  </div>
+  <% end %>
+</div>

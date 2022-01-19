@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>ごほうびリスト</h2>
+  <div class="row">
+    <% @rewards.each do |rewards| %>
+    <table class="table table-bordered">
+      <thead>
+        <tr align="center">
+          <th>画像</th>
+          <th>ごほうび</th>
+          <th>ひつようポイント</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align="center">
+          <td>
+            <%= attachment_image_tag rewards, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>
+          </td>
+          <td>
+            <%= link_to reward_path(@rewards) do %>
+              <%= rewards.title %>
+            <% end %>
+          </td>
+          <td>
+            <%= rewards.total_point %>ポイント
+          </td>
+          <td>
+            <button class="btn btn-success">ほしいリストに入れる</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>

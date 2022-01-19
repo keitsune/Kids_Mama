@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-7 d-flex justify-content-center">
+      <table>
+        <tbody>
+          <tr>
+            <td>ごほうび</td>
+            <td>
+              <%= @reward.title %>
+            </td>
+          </tr>
+          <tr>
+            <td>ひつようポイント</td>
+            <td>
+              <%= @reward.total_point %>ポイント
+            </td>
+          </tr>
+          <tr>
+            <td>おうえんメッセージ</td>
+            <td>
+              <%= @reward.message %>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <%= link_to edit_admin_reward_path(@reward) do %>
+                <button class="btn btn-success">へんしゅう</button>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-5 d-flex justify-content-center">
+      <%= attachment_image_tag @reward, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
+    </div>
+  </div>
+</div>

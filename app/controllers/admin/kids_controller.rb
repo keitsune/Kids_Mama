@@ -1,5 +1,5 @@
 class Admin::KidsController < ApplicationController
-  #before_action :authenricate_admin!
+  before_action :authenticate_admin!
   def index
     @kids = Kid.all
   end

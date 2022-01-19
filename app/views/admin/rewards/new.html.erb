@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>ごほうび追加</h2>
+  <div class="col-8 d-flex justify-content-center">
+    <%= form_with model: @reward, url: admin_rewards_path, local: true do |f| %>
+    <table>
+      <tbody>
+        <tr>
+          <td>ごほうび名</td>
+          <td>
+            <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
+          </td>
+        </tr>
+        <tr>
+          <td>必要ポイント</td>
+          <td>
+            <%= f.text_field :total_point, autofocus: true, autocomplete: "total_point" %>
+          </td>
+        </tr>
+        <tr>
+          <td>おうえんメッセージ</td>
+          <td>
+            <%= f.text_area :message, autofocus: true, autocomplete: "message" %>
+          </td>
+        </tr>
+        <tr>
+          <td>アイコン</td>
+          <td>
+            <%= f.attachment_field :image %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <%= f.submit "追加する", class: "btn btn-success" %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>
