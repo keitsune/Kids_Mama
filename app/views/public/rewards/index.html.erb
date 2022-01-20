@@ -17,7 +17,7 @@
             <%= attachment_image_tag rewards, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>
           </td>
           <td>
-            <%= link_to reward_path(@rewards) do %>
+            <%= link_to reward_path(rewards.id) do %>
               <%= rewards.title %>
             <% end %>
           </td>
