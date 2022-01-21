@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>へんしゅう</h2>
+  <div class="col-8 d-flex justify-content-center">
+    <%= form_with model: @help, url: admin_help_path, local: true do |f| %>
+    <table>
+      <tbody>
+        <tr>
+          <td>おてつだい名</td>
+          <td>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          </td>
+        </tr>
+        <tr>
+          <td>おてつだい内容</td>
+          <td>
+            <%= f.text_area :contents, autofocus: true, autocomplete: "contents" %>
+          </td>
+        </tr>
+        <tr>
+          <td>もらえるポイント</td>
+          <td>
+            <%= f.text_field :get_point, autofocus: true, autocomplete: "get_point" %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <%= f.submit "追加する", class: "btn btn-success" %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+</div>

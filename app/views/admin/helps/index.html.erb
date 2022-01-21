@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="col-12 d-flex justify-content-center">
+    <div class="col-6">
+      <h2>おてつだいリスト</h2>
+    </div>
+    <div class="col-5">
+      <%= link_to new_admin_help_path do %>
+        <button class="btn btn-success">おてつだい追加</button>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-12 d-flex justify-content-center">
+    <table class="table table-bordered">
+      <thead class="col-12">
+        <tr align="center">
+          <th class="col-3">おてつだい名</th>
+          <th class="col-6">内容</th>
+          <th class="col-3">もらえるポイント</th>
+        </tr>
+      </thead>
+      <% @helps.each do |helps| %>
+      <tbody>
+        <tr align="center">
+          <td>
+            <%= link_to admin_help_path(helps.id) do %>
+              <%= helps.name %>
+            <% end %>
+          </td>
+          <td>
+            <%= helps.contents %>
+          </td>
+          <td>
+            <%= helps.get_point %>ポイント
+          </td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

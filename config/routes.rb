@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  
   root 'homes#top'
 
   scope module: :public do
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :kids, only: [:index, :show]
     resources :rewards, only: [:index, :new, :create, :show, :edit, :update]
+    resources :helps, only: [:index, :new, :create, :show, :edit, :update]
   end
 
 end
