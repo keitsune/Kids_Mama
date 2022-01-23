@@ -11,16 +11,76 @@
 
   <body>
     <header>
-      <% if kid_signed_in? %>
-      <li>
-        <%= link_to "ログアウト", destroy_kid_session_path, method: :delete %>
-      </li>
-      <% elsif admin_signed_in?%>
-      <li>
-        <%= link_to "ログアウト", destroy_kid_session_path, method: :delete %>
-      </li>
-      <% end %>
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <%= link_to root_path do %>
+            <button class="btn btn-default border border-dark">logo</button>
+          <% end %>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+              <% if kid_signed_in? %>
+              <li>
+                <%= link_to kids_path do %>
+                  <button class="btn btn-default border border-dark">キッズ部屋</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to helps_path do %>
+                  <button class="btn btn-default border border-dark">おてつだいリスト</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to rewards_path do %>
+                  <button class="btn btn-default border border-dark">ごほうびリスト</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to want_rewards_path do %>
+                  <button class="btn btn-default border border-dark">ほしいリスト</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to target_rewards_path do %>
+                  <button class="btn btn-default border border-dark">目標ごほうび</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_kid_session_path, method: :delete do %>
+                  <button class="btn btn-default border border-dark">部屋を出る</button>
+                <% end %>
+              </li>
+              <% elsif admin_signed_in?%>
+              <li>
+                <%= link_to admin_kids_path do %>
+                  <button class="btn btn-default border border-dark">キッズリスト</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to admin_rewards_path do %>
+                  <button class="btn btn-default border border-dark">ごほうびリスト</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to admin_helps_path do %>
+                  <button class="btn btn-default border border-dark">おてつだいリスト</button>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_kid_session_path, method: :delete do %>
+                  <button class="btn btn-default border border-dark">部屋を出る</button>
+              </li>
+              <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <%= yield %>
+    <footer></footer>
   </body>
 </html>

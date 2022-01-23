@@ -1,0 +1,2 @@
+module Public::WantRewardsHelper
+end

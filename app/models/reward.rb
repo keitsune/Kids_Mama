@@ -1,8 +1,11 @@
 class Reward < ApplicationRecord
-  
+
+  has_many :want_rewards, dependent: :destroy
+  has_many :target_rewards, dependent: :destroy
+
   validates :title, presence: true
   validates :total_point, presence: true
 
-  
+
   attachment :image
 end

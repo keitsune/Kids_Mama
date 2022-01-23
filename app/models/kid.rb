@@ -4,6 +4,9 @@ class Kid < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
+  has_many :want_rewards, dependent: :destroy
+  has_many :target_rewards, dependent: :destroy
+         
   validates :name, presence: true
 
   attachment :image

@@ -1,7 +1,6 @@
 <div class="container">
   <h2>ごほうびリスト</h2>
   <div class="row">
-    <% @rewards.each do |rewards| %>
     <table class="table table-bordered">
       <thead>
         <tr align="center">
@@ -11,6 +10,7 @@
           <th></th>
         </tr>
       </thead>
+      <% @rewards.each do |rewards| %>
       <tbody>
         <tr align="center">
           <td>
@@ -25,11 +25,13 @@
             <%= rewards.total_point %>ポイント
           </td>
           <td>
-            <button class="btn btn-success">ほしいリストに入れる</button>
+            <%= link_to want_rewards_path(reward_id: rewards.id), method: :post do %>
+              <button class="btn btn-success">ほしいリストに入れる</button>
+            <% end %>
           </td>
         </tr>
       </tbody>
+      <% end %>
     </table>
-    <% end %>
   </div>
 </div>

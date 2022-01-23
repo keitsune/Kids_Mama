@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-  
   root 'homes#top'
 
   scope module: :public do
@@ -10,6 +8,9 @@ Rails.application.routes.draw do
     patch "kids/withdraw" => "kids#withdraw"
     put "kids/withdraw" => "kids#withdraw"
     resources :rewards, only: [:index, :show]
+    resources :helps, only: [:index]
+    resources :want_rewards, only: [:index, :create, :destroy]
+    resources :target_rewards, only: [:index, :create, :destroy]
   end
 
 

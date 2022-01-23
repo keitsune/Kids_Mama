@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>おてつだいリスト</h2>
+  <div class="row">
+    <table class="table table-bordered">
+      <thead>
+        <tr align="center">
+          <th>おてつだい名</th>
+          <th>内容</th>
+          <th>もらえるポイント</th>
+          <th></th>
+        </tr>
+      </thead>
+      <% @helps.each do |helps| %>
+      <tbody>
+        <tr align="center">
+          <td>
+            <%= helps.name %>
+          </td>
+          <td>
+            <%= helps.contents %>
+          </td>
+          <td>
+            <%= helps.get_point %>ポイント
+          </td>
+          <td>
+            <button class="btn btn-success">てつだう</button>
+          </td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

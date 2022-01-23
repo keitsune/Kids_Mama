@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>ほしいリスト</h2>
+  <div class="col-12 d-flex justify-content-center">
+    <table class="table table-bordered">
+      <thead>
+        <tr align="center">
+          <th>画像</th>
+          <th>ごほうび名</th>
+          <th>ひつようポイント</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <% @want_rewards.each do |want_reward| %>
+      <tbody>
+        <tr align="center">
+          <td>
+            <%= attachment_image_tag want_reward.reward, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>
+          </td>
+          <td>
+            <%= want_reward.reward.title %>
+          </td>
+          <td>
+            <%= want_reward.reward.message %>
+          </td>
+          <td>
+            <%= link_to target_rewards_path(reward_id: want_reward.id), method: :post do %>
+              <button class="btn btn-success">目標ごほうびに設定</button>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to want_reward_path(want_reward), method: :delete, data: { confirm: '本当にいらないですか？' } do %>
+              <button class="btn btn-danger">やっぱりいらない</button>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>
