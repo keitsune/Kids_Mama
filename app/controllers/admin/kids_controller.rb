@@ -1,7 +1,7 @@
 class Admin::KidsController < ApplicationController
   before_action :authenticate_admin!
   def index
-    @kids = Kid.all
+    @kids = current_admin.kids
   end
 
   def show

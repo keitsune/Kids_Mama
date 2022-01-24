@@ -1,31 +1,29 @@
 <div class="container">
-  <h2>おてつだいリスト</h2>
-  <div class="row">
+  <h2>おてつだいりれき</h2>
+  <div class="col-12 d-flex justify-content-center">
     <table class="table table-bordered">
       <thead>
         <tr align="center">
+          <th>おてつだい日</th>
           <th>おてつだい名</th>
-          <th>内容</th>
           <th>もらえるポイント</th>
-          <th></th>
+          <th>おてつだい状況</th>
         </tr>
       </thead>
-      <% @helps.each do |helps| %>
+      <% @help_items.each do |help_item| %>
       <tbody>
         <tr align="center">
           <td>
-            <%= helps.name %>
+            <%= help_item.help.created_at.strftime('%Y/%m/%d') %>
           </td>
           <td>
-            <%= helps.contents %>
+            <%= help_item.help.name %>
           </td>
           <td>
-            <%= helps.get_point %>ポイント
+            <%= help_item.help.get_point %>
           </td>
           <td>
-            <%= link_to help_items_path(help_id: helps.id), method: :post do %>
-              <button class="btn btn-success">てつだう</button>
-            <% end %>
+            <%= help_item.help_status %>
           </td>
         </tr>
       </tbody>

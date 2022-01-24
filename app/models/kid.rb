@@ -6,6 +6,8 @@ class Kid < ApplicationRecord
          
   has_many :want_rewards, dependent: :destroy
   has_many :target_rewards, dependent: :destroy
+  has_many :help_items, dependent: :destroy
+  belongs_to :admin
          
   validates :name, presence: true
 

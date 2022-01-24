@@ -33,7 +33,9 @@
         <button class="btn btn-success">ごほうびりれき</button>
       </div>
       <div class="col">
-        <button class="btn btn-success">おてつだいりれき</button>
+        <%= link_to admin_help_items_path(kid_id: @kid.id) do %>
+          <button class="btn btn-success">おてつだいりれき</button>
+        <% end %>
       </div>
     </div>
   </div>
