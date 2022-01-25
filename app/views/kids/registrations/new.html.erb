@@ -1,7 +1,6 @@
 <div class="container">
   <h2>キッズ部屋をつくる！</h2>
   <div class="col-8">
-    <%# binding.pry %>
     <% @admin = Admin.all %>
 
     <%= form_with model: @kid, url: kid_registration_path, local: true do |f| %>

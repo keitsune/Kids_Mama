@@ -23,7 +23,7 @@
             <%= help_item.help.get_point %>
           </td>
           <td>
-            <%= help_item.help_status %>
+            <%= help_item.help_status == "true" ? "おてつだい中" : "ポイントゲット！" %>
           </td>
         </tr>
       </tbody>

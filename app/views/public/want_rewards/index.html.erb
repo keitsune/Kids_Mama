@@ -24,7 +24,7 @@
             <%= want_reward.reward.message %>
           </td>
           <td>
-            <%= link_to target_rewards_path(reward_id: want_reward.id), method: :post do %>
+            <%= link_to target_rewards_path(reward_id: want_reward.reward_id), method: :post do %>
               <button class="btn btn-success">目標ごほうびに設定</button>
             <% end %>
           </td>

@@ -13,29 +13,31 @@
           <th></th>
         </tr>
       </thead>
-      <% @help_items.each do |help_item| %>
+
       <tbody>
-        <tr align="center">
-          <td>
-            <%= help_item.help.created_at.strftime('%Y/%m/%d') %>
-          </td>
-          <td>
-            <%= help_item.help.name %>
-          </td>
-          <td>
-            <%= help_item.help.get_point %>ポイント
-          </td>
-          <%= form_with model: help_item, url: admin_help_item_path(help_item), local: true do |f| %>
-          <td>
-            <%= f.select :help_status, [['おてつだい中', true],['ポイントゲット！', false]] %>
-          </td>
-          <td>
-            <%= f.submit "更新", class: "btn btn-success" %>
-          </td>
-          <% end %>
-        </tr>
+        <% @help_items.each do |help_item| %>
+          <tr align="center">
+            <td>
+              <%= help_item.help.created_at.strftime('%Y/%m/%d') %>
+            </td>
+            <td>
+              <%= help_item.help.name %>
+            </td>
+            <td>
+              <%= help_item.help.get_point %>ポイント
+            </td>
+            <%= form_with model: help_item, url: admin_help_item_path(help_item), local: true do |f| %>
+            <td>
+              <%= f.select :help_status, [['おてつだい中', true],['ポイントゲット！', false]] %>
+            </td>
+            <td>
+              <%= f.submit "更新", class: "btn btn-success" %>
+            </td>
+            <% end %>
+          </tr>
+        <% end %>
       </tbody>
-      <% end %>
+
     </table>
   </div>
 </div>

@@ -1,7 +1,7 @@
 class Public::TargetRewardsController < ApplicationController
   def index
     @target_rewards = current_kid.target_rewards
-    
+
   end
 
   def create

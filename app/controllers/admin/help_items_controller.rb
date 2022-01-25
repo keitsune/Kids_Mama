@@ -1,7 +1,7 @@
 class Admin::HelpItemsController < ApplicationController
   def index
-    @help_items = HelpItem.all
-    @kid = Kid.first
+    @help_items = HelpItem.where(kid_id: params[:kid_id])
+    @kid = Kid.find(params[:kid_id])
   end
 
   def update
@@ -12,7 +12,7 @@ class Admin::HelpItemsController < ApplicationController
     if @help_item.help_status == false
       @kid.update(points: @kid.points + @help.get_point)
     end
-    redirect_to admin_help_items_path
+    redirect_to admin_help_items_path(kid_id: @kid.id)
   end
 
   private

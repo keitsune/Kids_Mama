@@ -1,7 +1,7 @@
 class Public::HelpItemsController < ApplicationController
   def index
     @kid = current_kid
-    @help_items = HelpItem.all
+    @help_items = current_kid.help_items
   end
 
   def create

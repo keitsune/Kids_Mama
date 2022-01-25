@@ -9,9 +9,10 @@
         <div align="center">
           <%= attachment_image_tag target_reward.reward, :image, format: 'jpeg', class: "rounded-circle", size:"150x150", fallback: "no_image.jpg" %>
         </div>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style=<%= target_reward.kid.points %> aria-valuenow=<%= target_reward.kid.points %> aria-valuemin="0" aria-valuemax=<%= target_reward.reward.total_point %>></div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: <%= (target_reward.kid.points.to_f / target_reward.reward.total_point.to_f) * 100  %>%" aria-valuenow="<%= target_reward.kid.points %>" aria-valuemin="0" aria-valuemax="<%= target_reward.reward.total_point %>"></div>
           </div>
+
           <% if current_kid.points >= target_reward.reward.total_point %>
             <button class="btn btn-success">ごほうびゲット！</button>
           <% end %>
