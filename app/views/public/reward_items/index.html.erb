@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>ごほうびりれき</h2>
+  <div class="col-12 d-flex justify-content-center">
+    <table class="table table-bordered">
+      <thead>
+        <tr align="center">
+          <th>画像</th>
+          <th>ごほうび名</th>
+          <th>ひつようポイント</th>
+          <th>ごほうび状況</th>
+        </tr>
+      </thead>
+      <% @reward_items.each do |reward_item| %>
+      <tbody>
+        <tr align="center">
+          <td>
+            <%= attachment_image_tag reward_item.reward, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>
+          </td>
+          <td>
+            <%= reward_item.reward.title%>
+          </td>
+          <td>
+            <%= reward_item.reward.total_point %>
+          </td>
+          <td>
+            <% if reward_item.reward_status == true %>
+              ごほうび待ち
+             <% else %>
+              ごほうびゲット！
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

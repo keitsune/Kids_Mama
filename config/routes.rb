@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :want_rewards, only: [:index, :create, :destroy]
     resources :target_rewards, only: [:index, :create, :destroy]
     resources :help_items, only: [:index, :create]
+    resources :reward_items, only: [:index, :create]
   end
 
 
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
     resources :rewards, only: [:index, :new, :create, :show, :edit, :update]
     resources :helps, only: [:index, :new, :create, :show, :edit, :update]
     resources :help_items, only: [:index, :update]
+    resources :reward_items, only: [:index, :update]
   end
 
 end

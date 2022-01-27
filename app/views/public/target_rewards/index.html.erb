@@ -14,7 +14,9 @@
           </div>
 
           <% if current_kid.points >= target_reward.reward.total_point %>
-            <button class="btn btn-success">ごほうびゲット！</button>
+            <%= link_to reward_items_path(reward_id: target_reward.reward_id), method: :post do %>
+              <button class="btn btn-success">ごほうびゲット！</button>
+            <% end %>
           <% end %>
         </div>
       </div>

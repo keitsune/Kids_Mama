@@ -33,6 +33,27 @@
               <%= @kid.points %>ポイント
             </td>
           </tr>
+          <tr>
+            <td>
+              <%= link_to target_rewards_path do %>
+                <button class="btn btn-success">目標ごほうび</button>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= link_to reward_items_path do %>
+                <button class="btn btn-success">ごほうびりれき</button>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= link_to help_items_path do %>
+                <button class="btn btn-success">おてつだいりれき</button>
+              <% end %>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
