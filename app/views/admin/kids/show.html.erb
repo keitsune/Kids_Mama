@@ -30,7 +30,9 @@
   <div class="row">
     <div class="col-6 d-flex justify-content-between">
       <div class="col">
-        <button class="btn btn-success">ごほうびりれき</button>
+        <%= link_to admin_reward_items_path(kid_id: @kid.id) do %>
+          <button class="btn btn-success">ごほうびりれき</button>
+        <% end %>
       </div>
       <div class="col">
         <%= link_to admin_help_items_path(kid_id: @kid.id) do %>

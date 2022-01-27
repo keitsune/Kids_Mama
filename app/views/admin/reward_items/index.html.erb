@@ -1,2 +1,45 @@
-<h1>Admin::RewardItems#index</h1>
-<p>Find me in app/views/admin/reward_items/index.html.erb</p>
+<div class="container">
+  <h2>
+    <%= @kid.name %>のごほうびりれき
+  </h2>
+  <div class="col-12 d-flex justify-content-center">
+    <table class="table table-bordered">
+      <thead>
+        <tr align="center">
+          <th>目標たっせい日</th>
+          <th>画像</th>
+          <th>ごほうび名</th>
+          <th>ひつようポイント</th>
+          <th>ごほうび状況</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reward_items.each do |reward_item| %>
+        <tr align="center">
+          <td>
+            <%= reward_item.updated_at.strftime('%Y/%m/%d') %>
+          </td>
+          <td>
+            <%= attachment_image_tag reward_item.reward, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>
+          </td>
+          <td>
+            <%= reward_item.reward.title %>
+          </td>
+          <td>
+            <%= reward_item.reward.total_point %>
+          </td>
+          <%= form_with model: reward_item, url: admin_reward_item_path(reward_item), local: true do |f| %>
+          <td>
+            <%= f.select :reward_status, [['ごほうび待ち', true],['ごほうびゲット！', false]] %>
+          </td>
+          <td>
+            <%= f.submit "更新", class: "btn btn-success" %>
+          </td>
+          <% end %>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

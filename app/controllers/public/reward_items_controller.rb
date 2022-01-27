@@ -1,7 +1,6 @@
 class Public::RewardItemsController < ApplicationController
   def index
     @kid = current_kid
-    #@reward = current_kid.rewards
     @reward_items = current_kid.reward_items
   end
 
