@@ -13,7 +13,7 @@ class Public::TargetRewardsController < ApplicationController
 
   def destroy
     @target_reward = TargetReward.find(params[:id])
-    @targer_reward.destroy
+    @target_reward.destroy
     redirect_to target_rewards_path
   end
 

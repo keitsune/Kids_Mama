@@ -1,14 +1,16 @@
 <div class="container">
   <h2>キッズリスト</h2>
-  <div class="w-25 h-auto">
+  <div class="wrap">
     <% @kids.each do |kid| %>
-      <div class="col d-flex justify-content-center">
-        <%= attachment_image_tag kid, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
-      </div>
-      <div class="col d-flex justify-content-center">
-        <%= link_to admin_kid_path(kid) do %>
-          <%= kid.name %>
-        <% end %>
+      <div class="box">
+        <div class="col d-flex justify-content-center">
+          <%= attachment_image_tag kid, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <%= link_to admin_kid_path(kid) do %>
+            <%= kid.name %>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>

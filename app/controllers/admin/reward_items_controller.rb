@@ -12,7 +12,7 @@ class Admin::RewardItemsController < ApplicationController
     if @reward_item.reward_status == false
       @kid.update(points: @kid.points - @reward.total_point)
     end
-    redirect_to admin_reward_items_path(kid_id: @kid.id)
+    redirect_to admin_kid_path(@kid.id)
   end
 
   private

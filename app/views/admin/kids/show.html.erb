@@ -5,18 +5,22 @@
       <table>
         <tbody>
           <tr>
-            <td>なまえ</td>
+            <td class="pt-3 pb-3 pr-5">
+              <h4>なまえ</h4>
+            </td>
             <td>
-              <%= @kid.name %>
+              <h4><%= @kid.name %></h4>
             </td>
           </tr>
           <tr>
-            <td>もっているポイント</td>
+            <td class="pt-3 pb-3 pr-5">
+              <h4>もっているポイント</h4>
+            </td>
             <td>
               <% if @kid.points.present? %>
-                <%= @kid.points %>ポイント
+                <h4><%= @kid.points %>ポイント</h4>
               <% else %>
-                0ポイント
+                <h4>0ポイント</h4>
               <% end %>
             </td>
           </tr>
@@ -31,12 +35,12 @@
     <div class="col-6 d-flex justify-content-between">
       <div class="col">
         <%= link_to admin_reward_items_path(kid_id: @kid.id) do %>
-          <button class="btn btn-success">ごほうびりれき</button>
+          <button class="btn btn-success">ごほうび履歴</button>
         <% end %>
       </div>
       <div class="col">
         <%= link_to admin_help_items_path(kid_id: @kid.id) do %>
-          <button class="btn btn-success">おてつだいりれき</button>
+          <button class="btn btn-success">おてつだい履歴</button>
         <% end %>
       </div>
     </div>

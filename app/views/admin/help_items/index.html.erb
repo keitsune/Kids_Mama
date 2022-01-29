@@ -1,6 +1,6 @@
 <div clsss="container">
-  <h2>
-    <%= @kid.name %>のおてつだいりれき
+  <h2 class="ml-3">
+    <%= @kid.name %>のおてつだい履歴
   </h2>
   <div class="col-12 d-flex justify-content-center">
     <table class="table table-bordered">
@@ -10,7 +10,6 @@
           <th>おてつだい名</th>
           <th>もらえるポイント</th>
           <th>おてつだい状況</th>
-          <th></th>
         </tr>
       </thead>
 
@@ -26,14 +25,14 @@
             <td>
               <%= help_item.help.get_point %>ポイント
             </td>
-            <%= form_with model: help_item, url: admin_help_item_path(help_item), local: true do |f| %>
+
             <td>
-              <%= f.select :help_status, [['おてつだい中', true],['ポイントゲット！', false]] %>
+              <%= form_with model: help_item, url: admin_help_item_path(help_item), local: true do |f| %>
+                <%= f.select :help_status, [['おてつだい中', true],['ポイントゲット！', false]] %>
+                <%= f.submit "更新", class: "ml-5 btn btn-success" %>
+              <% end %>
             </td>
-            <td>
-              <%= f.submit "更新", class: "btn btn-success" %>
-            </td>
-            <% end %>
+
           </tr>
         <% end %>
       </tbody>

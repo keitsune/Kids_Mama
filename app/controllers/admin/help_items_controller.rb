@@ -12,7 +12,7 @@ class Admin::HelpItemsController < ApplicationController
     if @help_item.help_status == false
       @kid.update(points: @kid.points + @help.get_point)
     end
-    redirect_to admin_help_items_path(kid_id: @kid.id)
+    redirect_to admin_kid_path(@kid.id)
   end
 
   private
