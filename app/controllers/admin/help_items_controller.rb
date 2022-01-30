@@ -1,4 +1,7 @@
 class Admin::HelpItemsController < ApplicationController
+  
+  before_action :authenticate_admin!
+  
   def index
     @help_items = HelpItem.where(kid_id: params[:kid_id])
     @kid = Kid.find(params[:kid_id])

@@ -2,7 +2,7 @@
   <h2>おてつだいりれき</h2>
   <div class="col-12 d-flex justify-content-center">
     <table class="table table-bordered">
-      <thead>
+      <thead bgcolor="white">
         <tr align="center">
           <th>おてつだい日</th>
           <th>おてつだい名</th>
@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <% @help_items.each do |help_item| %>
-      <tbody>
+      <tbody bgcolor="white">
         <tr align="center">
           <td>
             <%= help_item.help.updated_at.strftime('%Y/%m/%d') %>

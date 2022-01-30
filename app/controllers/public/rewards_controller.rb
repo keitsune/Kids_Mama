@@ -1,4 +1,7 @@
 class Public::RewardsController < ApplicationController
+  
+  before_action :authenticate_user
+  
   def index
     @rewards = Reward.all
   end

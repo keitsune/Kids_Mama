@@ -5,8 +5,8 @@ class Kids::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
   def reject_inactive_kid
-    @kid = Kid.find_by(email: params[:kid][:email])
-    if @kid.valid_password?(params[:kid][:passward]) && @kid.is_deleted
+    @kid = Kid.find_by(name: params[:kid][:name])
+    if @kid.valid_password?(params[:kid][:password]) && @kid.is_deleted
       redirect_to new_kid_session_path
     end
   end
@@ -30,7 +30,7 @@ class Kids::SessionsController < Devise::SessionsController
   # def after_sign_in_path_for(resource)
   #   kids_path
   # end
-  
+
   # def after_sign_out_path_for(resource)
   #   root_path
   # end

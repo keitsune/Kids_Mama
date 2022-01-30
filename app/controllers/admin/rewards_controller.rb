@@ -1,5 +1,7 @@
 class Admin::RewardsController < ApplicationController
-  #before_action :authenricate_admin!
+  
+  before_action :authenticate_admin!
+  
   def index
     @rewards = Reward.all
   end

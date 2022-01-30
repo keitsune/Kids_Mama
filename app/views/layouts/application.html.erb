@@ -12,7 +12,7 @@
   <body>
     <div class="content">
       <header>
-        <nav class="navbar navbar-expand-lx navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lx navbar-light bg-white fixed-top">
           <%= image_tag 'Kids Mama logo.png', :size => '80x80' %>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,9 @@
           </div>
         </nav>
       </header>
-      <%= yield %>
+      <main>
+        <%= yield %>
+      </main>
       <footer></footer>
     </div>
   </body>

@@ -1,4 +1,7 @@
 class Public::WantRewardsController < ApplicationController
+  
+  before_action :authenticate_user
+  
   def index
     @want_rewards = current_kid.want_rewards
   end

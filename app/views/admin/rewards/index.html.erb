@@ -2,7 +2,7 @@
   <div>
     <h2>ごほうびリスト</h2>
   </div>
-  <div>
+  <div class="pt-5">
     <%= link_to new_admin_reward_path do %>
       <button class="btn btn-success">ごほうび追加</button>
     <% end %>
@@ -10,7 +10,7 @@
 </div>
 <div class="wrap">
   <% @rewards.each do |reward| %>
-    <div class="box mb-5">
+    <div class="box mb-5 pt-5">
       <div class="mb-3">
         <%= attachment_image_tag reward, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
       </div>

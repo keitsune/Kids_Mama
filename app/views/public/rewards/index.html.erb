@@ -2,7 +2,7 @@
   <h2>ごほうびリスト</h2>
   <div class="row">
     <table class="table table-bordered">
-      <thead>
+      <thead bgcolor="white">
         <tr align="center">
           <th>画像</th>
           <th>ごほうび</th>
@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <% @rewards.each do |rewards| %>
-      <tbody>
+      <tbody bgcolor="white">
         <tr align="center">
           <td>
             <%= attachment_image_tag rewards, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>

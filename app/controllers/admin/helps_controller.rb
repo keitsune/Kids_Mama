@@ -1,4 +1,7 @@
 class Admin::HelpsController < ApplicationController
+  
+  before_action :authenticate_admin!
+  
   def index
     @helps = Help.all
   end

@@ -1,4 +1,7 @@
 class Admin::RewardItemsController < ApplicationController
+  
+  before_action :authenticate_admin!
+  
   def index
     @reward_items = RewardItem.where(kid_id: params[:kid_id])
     @kid = Kid.find(params[:kid_id])
