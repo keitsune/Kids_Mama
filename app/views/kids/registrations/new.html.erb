@@ -1,6 +1,6 @@
 <div class="container">
   <h2>キッズ部屋をつくる！</h2>
-  <div class="col-8">
+  <div class="col-8 d-flex justify-content-center">
     <% @admin = Admin.all %>
 
     <%= form_with model: @kid, url: kid_registration_path, local: true do |f| %>
@@ -8,25 +8,25 @@
     <table>
       <tbody>
         <tr>
-          <td>ママのなまえ</td>
+          <td class="pr-5 pb-3">ママのなまえ</td>
           <td>
             <%= f.collection_select(:admin_id, @admin, :id, :name, include_blank: "選択して下さい" ) %>
           </td>
         </tr>
         <tr>
-          <td>なまえ</td>
+          <td class="pr-5 pb-3">なまえ</td>
           <td>
             <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
           </td>
         </tr>
         <tr>
-          <td>めーるあどれす</td>
+          <td class="pr-5 pb-3">めーるあどれす</td>
           <td>
             <%=f.text_field :email, autofocus: true, autocomplete: "email" %>
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="pr-5 pb-3">
             ぱすわーど
             <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> 文字以上)</em>
@@ -37,7 +37,7 @@
           </td>
         </tr>
         <tr>
-          <td>ぱすわーど(もう一度)</td>
+          <td class="pr-5 pb-3">ぱすわーど(もう一度)</td>
           <td>
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
           </td>
@@ -45,7 +45,7 @@
         <tr>
           <td></td>
           <td>
-            <%= f.submit "部屋をつくる!", class: "btn btn-success" %>
+            <%= f.submit "部屋をつくる!", class: "btn btn-success w-100" %>
           </td>
         </tr>
       </tbody>

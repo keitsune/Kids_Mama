@@ -10,77 +10,84 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lx navbar-light bg-light fixed-top">
-        <%= image_tag 'Kids Mama logo.png', :size => '80x80' %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <% if kid_signed_in? %>
-              <li class="nav-item active">
-                <%= link_to kids_path do %>
-                  <button class="btn btn-default border border-dark">キッズ部屋</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to helps_path do %>
-                  <button class="btn btn-default border border-dark">おてつだいリスト</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to rewards_path do %>
-                  <button class="btn btn-default border border-dark">ごほうびリスト</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to want_rewards_path do %>
-                  <button class="btn btn-default border border-dark">ほしいリスト</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to target_rewards_path do %>
-                  <button class="btn btn-default border border-dark">目標ごほうび</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to help_items_path do %>
-                  <button class="btn btn-default border border-dark">おてつだいりれき</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to destroy_kid_session_path, method: :delete do %>
-                  <button class="btn btn-default border border-dark">部屋を出る</button>
-                <% end %>
-              </li>
-            <% elsif admin_signed_in?%>
-              <li class="mt-1 mb-1 nav-item active">
-                <%= link_to admin_kids_path do %>
-                  <button class="btn btn-default border border-dark">キッズリスト</button>
-                <% end %>
-              </li>
-              <li class="mt-1 mb-1 nav-item active">
-                <%= link_to admin_rewards_path do %>
-                  <button class="btn btn-default border border-dark">ごほうびリスト</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to admin_helps_path do %>
-                  <button class="btn btn-default border border-dark">おてつだいリスト</button>
-                <% end %>
-              </li>
-              <li class="nav-item active">
-                <%= link_to destroy_kid_session_path, method: :delete do %>
-                  <button class="btn btn-default border border-dark">部屋を出る</button>
-                <% end %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <%= yield %>
-    <footer></footer>
+    <div class="content">
+      <header>
+        <nav class="navbar navbar-expand-lx navbar-light bg-light fixed-top">
+          <%= image_tag 'Kids Mama logo.png', :size => '80x80' %>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <% if kid_signed_in? %>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to kids_path do %>
+                    <button class="btn btn-default border border-dark w-25">キッズ部屋</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to helps_path do %>
+                    <button class="btn btn-default border border-dark w-25">おてつだいリスト</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to rewards_path do %>
+                    <button class="btn btn-default border border-dark w-25">ごほうびリスト</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to want_rewards_path do %>
+                    <button class="btn btn-default border border-dark w-25">ほしいリスト</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to target_rewards_path do %>
+                    <button class="btn btn-default border border-dark w-25">目標ごほうび</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to help_items_path do %>
+                    <button class="btn btn-default border border-dark w-25">おてつだいりれき</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to reward_items_path do %>
+                    <button class="btn btn-default border border-dark w-25">ごほうびりれき</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to destroy_kid_session_path, method: :delete do %>
+                    <button class="btn btn-default border border-dark w-25">部屋を出る</button>
+                  <% end %>
+                </li>
+              <% elsif admin_signed_in?%>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to admin_kids_path do %>
+                    <button class="btn btn-default border border-dark w-25">キッズリスト</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to admin_rewards_path do %>
+                    <button class="btn btn-default border border-dark w-25">ごほうびリスト</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to admin_helps_path do %>
+                    <button class="btn btn-default border border-dark w-25">おてつだいリスト</button>
+                  <% end %>
+                </li>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to destroy_kid_session_path, method: :delete do %>
+                    <button class="btn btn-default border border-dark w-25">部屋を出る</button>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <%= yield %>
+      <footer></footer>
+    </div>
   </body>
 </html>

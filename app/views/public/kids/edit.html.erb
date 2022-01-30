@@ -5,28 +5,32 @@
     <table>
       <tbody>
         <tr>
-          <td>アイコン</td>
+          <td class="pr-5 pb-5">
+            <h5>アイコン</h5>
+          </td>
           <td>
             <%= f.attachment_field :image %>
           </td>
         </tr>
         <tr>
-          <td>なまえ</td>
+          <td class="pr-5 pb-5">
+            <h5>なまえ</h5>
+          </td>
           <td>
             <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
           </td>
         </tr>
         <tr>
-          <td></td>
+          <td class="pr-5 pb-5"></td>
           <td>
-            <%= f.submit "へんこう", class: "btn btn-success" %>
+            <%= f.submit "へんこう", class: "btn btn-success w-100" %>
           </td>
         </tr>
         <tr>
-          <td></td>
+          <td class="pr-5 pb-5"></td>
           <td>
             <%= link_to kids_unsubscribe_path do %>
-              <%= f.submit "部屋を退室する", class: "btn btn-danger" %>
+              <%= f.submit "部屋を退室する", class: "btn btn-danger w-100" %>
             <% end %>
           </td>
         </tr>

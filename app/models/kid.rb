@@ -11,6 +11,7 @@ class Kid < ApplicationRecord
   belongs_to :admin
 
   validates :name, presence: true
+  validates :points, length: {minimum: 0}
 
   attachment :image
 end

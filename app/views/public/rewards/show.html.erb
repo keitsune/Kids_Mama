@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-5 d-flex justify-content-center">
       <%= attachment_image_tag @reward, :image, format: 'jpeg', class: "rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
     </div>
@@ -7,35 +7,31 @@
       <table>
         <tbody>
           <tr>
-            <td>ごほうび名</td>
+            <td class="pb-5 pr-5">
+              <h5>ごほうび名</h5>
+            </td>
             <td>
-              <%= @reward.title %>
+              <h5><%= @reward.title %></h5>
             </td>
           </tr>
           <tr>
-            <td>ひつようポイント</td>
+            <td class="pb-5 pr-5">
+              <h5>ひつようポイント</h5>
+            </td>
             <td>
-            <%= @reward.total_point %>ポイント
+              <h5><%= @reward.total_point %>ポイント</h5>
             </td>
           </tr>
           <tr>
-            <td>おうえんメッセージ</td>
+            <td class="pb-5 pr-5">
+              <h5>おうえんメッセージ</h5>
+            </td>
             <td>
-              <%= @reward.message %>
+              <h5><%= @reward.message %></h5>
             </td>
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-8 d-flex justify-content-between">
-      <div>
-        <button class="btn btn-success">ほしいリストに入れる</button>
-      </div>
-      <div>
-        <button class="btn btn-success">目標のごほうびに設定</button>
-      </div>
     </div>
   </div>
 </div>

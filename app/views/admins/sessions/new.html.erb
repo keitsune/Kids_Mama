@@ -6,36 +6,38 @@
 <% end %>
 <div class="container">
   <h2>ママの部屋(ログイン)</h2>
-  <div class="col-8">
+  <div class="col-8 d-flex justify-content-center">
     <%= form_with model: @admin, url: new_admin_session_path, local: true do |f| %>
     <table>
       <tbody>
         <tr>
-          <td>なまえ</td>
+          <td class="pr-5 pb-5">なまえ</td>
           <td>
             <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
           </td>
         </tr>
         <tr>
-          <td>ぱすわーど</td>
+          <td class="pr-5 pb-5">ぱすわーど</td>
           <td>
             <%= f.password_field :password, autocomplete: "current-password" %>
           </td>
         </tr>
         <tr>
-          <td></td>
+          <td class="pr-5 pb-5"></td>
           <td>
-            <%= f.submit "部屋に入る", class: "btn btn-success" %>
+            <%= f.submit "部屋に入る", class: "mb-3 btn btn-success w-100" %>
           </td>
         </tr>
       </tbody>
     </table>
     <% end %>
-    <div class="col-8">
-      <h4>ママの部屋をつくっていない人はこちら</h4>
-      <%= link_to new_admin_registration_path do %>
-        <button class="btn btn-success">部屋をつくる！</button>
-      <% end %>
-    </div>
+  </div>
+  <div class="mb-3 col-8 d-flex justify-content-center">
+    <h4>ママの部屋をつくっていない人はこちら</h4>
+  </div>
+  <div class="col-8 d-flex justify-content-center">
+    <%= link_to new_admin_registration_path do %>
+      <button class="btn btn-success w-100">部屋をつくる！</button>
+    <% end %>
   </div>
 </div>

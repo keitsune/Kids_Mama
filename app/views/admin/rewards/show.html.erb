@@ -1,39 +1,46 @@
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
+    <div class="col-5 d-flex justify-content-center">
+      <%= attachment_image_tag @reward, :image, format: 'jpeg', class:"rounded-circle", size: "250x250", fallback: "no_image.jpg" %>
+    </div>
     <div class="col-7 d-flex justify-content-center">
       <table>
         <tbody>
           <tr>
-            <td>ごほうび</td>
+            <td class="pb-5 pr-5">
+              <h5>ごほうび</h5>
+            </td>
             <td>
-              <%= @reward.title %>
+              <h5><%= @reward.title %></h5>
             </td>
           </tr>
           <tr>
-            <td>ひつようポイント</td>
+            <td class="pb-5 pr-5">
+              <h5>ひつようポイント</h5>
+            </td>
             <td>
-              <%= @reward.total_point %>ポイント
+              <h5><%= @reward.total_point %>ポイント</h5>
             </td>
           </tr>
           <tr>
-            <td>おうえんメッセージ</td>
+            <td class="pb-5 pr-5">
+              <h5>おうえんメッセージ</h5>
+            </td>
             <td>
-              <%= @reward.message %>
+              <h5><%= @reward.message %></h5>
             </td>
           </tr>
           <tr>
             <td></td>
             <td>
               <%= link_to edit_admin_reward_path(@reward) do %>
-                <button class="btn btn-success">へんしゅう</button>
+                <button class="btn btn-success w-75">編集</button>
               <% end %>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="col-5 d-flex justify-content-center">
-      <%= attachment_image_tag @reward, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
-    </div>
+    
   </div>
 </div>

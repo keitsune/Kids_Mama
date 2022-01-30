@@ -5,33 +5,41 @@
     <table>
       <tbody>
         <tr>
-          <td>ごほうび名</td>
+          <td class="pb-5 pr-5">
+            <h5>ごほうび名</h5>
+          </td>
           <td>
             <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
           </td>
         </tr>
         <tr>
-          <td>必要ポイント</td>
+          <td class="pb-5 pr-5">
+            <h5>必要ポイント</h5>
+          </td>
           <td>
             <%= f.text_field :total_point, autofocus: true, autocomplete: "total_point" %>
           </td>
         </tr>
         <tr>
-          <td>おうえんメッセージ</td>
+          <td class="pb-5 pr-5">
+            <h5>おうえんメッセージ</h5>
+          </td>
           <td>
-            <%= f.text_area :message, autofocus: true, autocomplete: "message" %>
+            <%= f.text_area :message, autofocus: true, autocomplete: "message", class: "w-100" %>
           </td>
         </tr>
         <tr>
-          <td>アイコン</td>
+          <td class="pb-5 pr-5">
+            <h5>画像</h5>
+          </td>
           <td>
             <%= f.attachment_field :image %>
           </td>
         </tr>
         <tr>
-          <td></td>
+          <td class="pb-5 pr-5"></td>
           <td>
-            <%= f.submit "追加する", class: "btn btn-success" %>
+            <%= f.submit "追加する", class: "btn btn-success w-75" %>
           </td>
         </tr>
       </tbody>

@@ -10,15 +10,17 @@
 </div>
 <div class="wrap">
   <% @rewards.each do |reward| %>
-    <div class="box">
-      <%= attachment_image_tag reward, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
-      <div>
+    <div class="box mb-5">
+      <div class="mb-3">
+        <%= attachment_image_tag reward, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
+      </div>
+      <div class="mb-3">
         <%= link_to admin_reward_path(reward) do %>
           <%= reward.title %>
         <% end %>
       </div>
       <div>
-        <%= reward.total_point %>ポイント
+        <h5><%= reward.total_point %>ポイント</h5>
       </div>
     </div>
   <% end %>

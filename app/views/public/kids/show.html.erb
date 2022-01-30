@@ -5,17 +5,17 @@
       <table>
         <tbody>
           <tr>
-            <td>
-              <%= attachment_image_tag @kid, :image_id, fallback: "no_image.jpg", size: "100x100"%>
+            <td align="center">
+              <%= attachment_image_tag @kid, :image, fallback: "no_image.jpg", size: "120x120"%>
             </td>
           </tr>
           <tr>
-            <td>
-              <%= @kid.name %>
+            <td align="center">
+              <h5><%= @kid.name %></h5>
             </td>
           </tr>
           <tr>
-            <td>
+            <td align="center">
               <%= link_to edit_kids_path do %>
                 <button class="btn btn-success">へんこう</button>
               <% end %>
@@ -27,30 +27,34 @@
     <div class="col-sm-7 d-flex justify-content-center">
       <table>
         <tbody>
-          <tr>
-            <td>もっているポイント</td>
-            <td>
-              <%= @kid.points %>ポイント
+          <tr align="center">
+            <td class="pb-3">
+              <h5>もっているポイント</h5>
             </td>
           </tr>
-          <tr>
-            <td>
+          <tr align="center">
+            <td class="pb-3">
+              <h5><%= @kid.points %>ポイント</h5>
+            </td>
+          </tr>
+          <tr align="center">
+            <td class="pb-1">
               <%= link_to target_rewards_path do %>
-                <button class="btn btn-success">目標ごほうび</button>
+                <button class="btn btn-success w-100">目標ごほうび</button>
               <% end %>
             </td>
           </tr>
-          <tr>
-            <td>
+          <tr align="center">
+            <td class="pb-1">
               <%= link_to reward_items_path do %>
-                <button class="btn btn-success">ごほうびりれき</button>
+                <button class="btn btn-success w-100">ごほうびりれき</button>
               <% end %>
             </td>
           </tr>
-          <tr>
-            <td>
+          <tr align="center">
+            <td class="pb-1">
               <%= link_to help_items_path do %>
-                <button class="btn btn-success">おてつだいりれき</button>
+                <button class="btn btn-success w-100">おてつだいりれき</button>
               <% end %>
             </td>
           </tr>

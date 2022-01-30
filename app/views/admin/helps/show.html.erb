@@ -1,35 +1,35 @@
-<div class="col-8 d-flex justify-content-center">
-  <table class="table">
+<div class="col-12 d-flex justify-content-center">
+  <table>
     <tbody>
-      <tr align="center">
-        <td>
-          <h4>おてつだい名</h4>
+      <tr>
+        <td class="pb-5 pr-5">
+          <h5>おてつだい名</h5>
         </td>
         <td>
-          <h4><%= @help.name %></h4>
-        </td>
-      </tr>
-      <tr align="center">
-        <td>
-          <h4>内容</h4>
-        </td>
-        <td>
-          <h4><%= @help.contents %></h4>
+          <h5><%= @help.name %></h5>
         </td>
       </tr>
-      <tr align="center">
-        <td>
-          <h4>もらえるポイント</h4>
+      <tr>
+        <td class="pb-5 pr-5">
+          <h5>内容</h5>
         </td>
         <td>
-          <h4><%= @help.get_point %>ポイント</h4>
+          <h5><%= @help.contents %></h5>
         </td>
       </tr>
-      <tr align="center">
-        <td></td>
+      <tr>
+        <td class="pb-5 pr-5">
+          <h5>もらえるポイント</h5>
+        </td>
+        <td>
+          <h5><%= @help.get_point %>ポイント</h5>
+        </td>
+      </tr>
+      <tr>
+        <td class="pb-5 pr-5"></td>
         <td>
           <%= link_to edit_admin_help_path(@help.id) do %>
-            <button class="btn btn-success">へんしゅう</button>
+            <button class="btn btn-success w-50">編集</button>
           <% end %>
         </td>
       </tr>

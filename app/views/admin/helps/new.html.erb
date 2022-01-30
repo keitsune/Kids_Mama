@@ -5,27 +5,33 @@
     <table>
       <tbody>
         <tr>
-          <td>おてつだい名</td>
+          <td class="pb-5 pr-5">
+            <h5>おてつだい名</h5>
+          </td>
           <td>
             <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
           </td>
         </tr>
         <tr>
-          <td>おてつだい内容</td>
+          <td class="pb-5 pr-5">
+            <h5>おてつだい内容</h5>
+          </td>
           <td>
-            <%= f.text_area :contents, autofocus: true, autocomplete: "contents" %>
+            <%= f.text_area :contents, autofocus: true, autocomplete: "contents", class: "w-100" %>
           </td>
         </tr>
         <tr>
-          <td>もらえるポイント</td>
+          <td class="pb-5 pr-5">
+            <h5>もらえるポイント</h5>
+          </td>
           <td>
             <%= f.text_field :get_point, autofocus: true, autocomplete: "get_point" %>
           </td>
         </tr>
         <tr>
-          <td></td>
+          <td class="pb-5 pr-5"></td>
           <td>
-            <%= f.submit "追加する", class: "btn btn-success" %>
+            <%= f.submit "追加する", class: "btn btn-success w-75" %>
           </td>
         </tr>
       </tbody>
