@@ -24,6 +24,18 @@
               <% end %>
             </td>
           </tr>
+          <tr>
+            <td class="pt-3 pb-3 pr-5">
+              <h4>ステータス</h4>
+            </td>
+            <td>
+              <% if @kid.is_deleted == false %>
+                <h4>有効</h4>
+              <% else %>
+                <h4 class="text-danger">退会</h4>
+              <% end %>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
