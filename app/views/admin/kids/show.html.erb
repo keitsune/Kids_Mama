@@ -1,6 +1,9 @@
 <div class="container">
   <h2>キッズ情報</h2>
-  <div class="row">
+  <div class="col-10 d-flex justify-content-center">
+    <div class="col-4">
+      <%= attachment_image_tag @kid, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
+    </div>
     <div class="col-6">
       <table>
         <tbody>
@@ -39,18 +42,15 @@
         </tbody>
       </table>
     </div>
-    <div class="col-4">
-      <%= attachment_image_tag @kid, :image, format: 'jpeg', class:"rounded-circle", size: "200x200", fallback: "no_image.jpg" %>
-    </div>
   </div>
-  <div class="row">
-    <div class="col-6 d-flex justify-content-between">
-      <div class="col">
+  <div class="col-10 d-flex justify-content-center">
+    <div class="col-8 pt-3 d-flex justify-content-between">
+      <div>
         <%= link_to admin_reward_items_path(kid_id: @kid.id) do %>
           <button class="btn btn-success">ごほうび履歴</button>
         <% end %>
       </div>
-      <div class="col">
+      <div>
         <%= link_to admin_help_items_path(kid_id: @kid.id) do %>
           <button class="btn btn-success">おてつだい履歴</button>
         <% end %>
