@@ -52,6 +52,7 @@ ja:
           attributes:
             name:
               blank: が入力されていません
+              taken: はすでに存在します
             email:
               blank: が入力されていません
             password:
