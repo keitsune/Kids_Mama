@@ -1,8 +1,8 @@
 class Public::HelpsController < ApplicationController
-  
-  before_action :authenticate_user
-  
+
+  before_action :authenticate_kid!
+
   def index
-    @helps = Help.all
+    @helps = current_kid.admin.helps
   end
 end

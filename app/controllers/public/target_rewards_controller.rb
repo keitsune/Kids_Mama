@@ -1,7 +1,7 @@
 class Public::TargetRewardsController < ApplicationController
-  
-  before_action :authenticate_user
-  
+
+  before_action :authenticate_kid!
+
   def index
     @target_rewards = current_kid.target_rewards
 

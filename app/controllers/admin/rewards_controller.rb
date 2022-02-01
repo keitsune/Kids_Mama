@@ -3,7 +3,7 @@ class Admin::RewardsController < ApplicationController
   before_action :authenticate_admin!
   
   def index
-    @rewards = Reward.all
+    @rewards = current_admin.rewards
   end
 
   def new
@@ -11,7 +11,7 @@ class Admin::RewardsController < ApplicationController
   end
 
   def create
-    reward = Reward.new(reward_params)
+    reward = current_admin.rewards.new(reward_params)
     reward.save
     redirect_to admin_rewards_path
   end

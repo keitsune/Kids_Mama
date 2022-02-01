@@ -1,5 +1,6 @@
 class Reward < ApplicationRecord
 
+  belongs_to :admin
   has_many :want_rewards, dependent: :destroy
   has_many :target_rewards, dependent: :destroy
   has_many :reward_items, dependent: :destroy

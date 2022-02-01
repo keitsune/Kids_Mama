@@ -3,7 +3,7 @@ class Admin::HelpsController < ApplicationController
   before_action :authenticate_admin!
   
   def index
-    @helps = Help.all
+    @helps = current_admin.helps
   end
 
   def new
@@ -11,7 +11,7 @@ class Admin::HelpsController < ApplicationController
   end
 
   def create
-    help = Help.new(help_params)
+    help = current_admin.helps.new(help_params)
     help.save
     redirect_to admin_helps_path
   end

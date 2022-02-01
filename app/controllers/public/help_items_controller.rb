@@ -1,7 +1,7 @@
 class Public::HelpItemsController < ApplicationController
-  
-  before_action :authenticate_user
-  
+
+  before_action :authenticate_kid!
+
   def index
     @kid = current_kid
     @help_items = current_kid.help_items

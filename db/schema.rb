@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_150553) do
     t.string "name"
     t.string "contents"
     t.integer "get_point"
+    t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_150553) do
     t.text "message"
     t.integer "total_point"
     t.string "image_id"
+    t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,7 +5,7 @@ class CreateRewards < ActiveRecord::Migration[5.2]
       t.text :message
       t.integer :total_point
       t.string :image_id
-
+      t.integer :admin_id
       t.timestamps
     end
   end

@@ -4,7 +4,7 @@ class CreateHelps < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :contents
       t.integer :get_point
-
+      t.integer :admin_id
       t.timestamps
     end
   end
