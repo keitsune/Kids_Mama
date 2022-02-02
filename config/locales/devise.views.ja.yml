@@ -29,6 +29,7 @@ ja:
         email: めーるあどれす
         password: ぱすわーど
         name: なまえ
+        admin: ママのなまえ
       admin:
         email: めーるあどれす
         password: ぱすわーど
@@ -48,6 +49,8 @@ ja:
               blank: が入力されていません
             password:
               blank: が入力されていません
+            admin:
+              required: の選択が必要です
         admin:
           attributes:
             name:
