@@ -6,6 +6,8 @@ class Kids::SessionsController < Devise::SessionsController
 
   def reject_inactive_kid
     @kid = Kid.find_by(name: params[:kid][:name])
+    return redirect_to new_kid_session_path, alert: 'なまえまたはぱすわーどが違います。' if @kid.nil?
+
     if @kid.valid_password?(params[:kid][:password]) && @kid.is_deleted
       redirect_to new_kid_session_path
     end
