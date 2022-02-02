@@ -21,6 +21,15 @@
 
 ## 設計書
 
+ER図 https://drive.google.com/file/d/1baQ9U8Kky4F4BSHaxBgNzMNOCfj9hCxL/view?usp=sharing
+
+テーブル定義書 https://docs.google.com/spreadsheets/d/1rQFJ4r_Oa5a0n0RLjt2gYozwmBB3hj2mY3uOvfTDsFI/edit?usp=sharing
+
+詳細設計書 https://docs.google.com/spreadsheets/d/1CPQPc04mRptUbrCdM5fZbQzZU3fqYZ4c/edit?usp=sharing&ouid=106623475803494001153&rtpof=true&sd=true
+
+画面遷移図 https://drive.google.com/file/d/1aoCtC5lIiu81XlQ_KM36sbZLcQxFtYf4/view?usp=sharing
+
+テスト仕様書 https://docs.google.com/spreadsheets/d/10JMC1kcUoxARhdDlhIqWRX2N0SLqZ5yHhBG460MqVS0/edit?usp=sharing
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1RQGnPauLfso_hrKEMNJYh2bs7DQIonqLU1Q2I72pTws/edit?usp=sharing
@@ -31,4 +40,7 @@ https://docs.google.com/spreadsheets/d/1RQGnPauLfso_hrKEMNJYh2bs7DQIonqLU1Q2I72p
 * フレームワーク：Ruby on Rails
 * JSライブラリ：jQuery
 * IDE：Cloud9
+
+## 使用素材
+* アイコン https://icooon-mono.com
 
