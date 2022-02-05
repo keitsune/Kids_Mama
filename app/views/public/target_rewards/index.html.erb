@@ -13,7 +13,7 @@
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: <%= (target_reward.kid.points.to_f / target_reward.reward.total_point.to_f) * 100  %>%" aria-valuenow="<%= target_reward.kid.points %>" aria-valuemin="0" aria-valuemax="<%= target_reward.reward.total_point %>"></div>
         </div>
-        <div align="center">
+        <div class="mb-1" align="center">
           <%= link_to target_reward_path(target_reward), method: :delete, data: { confirm: '本当にやめますか？' } do %>
             <button class="btn btn-danger">目標をやめる</button>
           <% end %>
