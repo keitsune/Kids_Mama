@@ -2,8 +2,8 @@
   <h2>ほしいリスト</h2>
   <div class="col-12 d-flex justify-content-center">
     <table class="table table-bordered">
-      <thead bgcolor="white">
-        <tr align="center">
+      <thead class="line">
+        <tr class="heading">
           <th>画像</th>
           <th>ごほうび名</th>
           <th>ひつようポイント</th>
@@ -12,8 +12,8 @@
         </tr>
       </thead>
       <% @want_rewards.each do |want_reward| %>
-      <tbody bgcolor="white">
-        <tr align="center">
+      <tbody class="line">
+        <tr class="heading">
           <td>
             <%= attachment_image_tag want_reward.reward, :image, format: 'jpeg', class: "rounded-circle", size:"60x60", fallback: "no_image.jpg" %>
           </td>

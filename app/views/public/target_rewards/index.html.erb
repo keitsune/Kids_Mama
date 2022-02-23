@@ -3,22 +3,22 @@
   <div class="wrap">
     <% @target_rewards.each do |target_reward| %>
       <div class="box">
-        <div align="center">
+        <div class="heading">
           <%= target_reward.reward.title %>
         </div>
-        <div align="center">
+        <div class="heading">
           <%= attachment_image_tag target_reward.reward, :image, format: 'jpeg', class: "rounded-circle", size:"150x150", fallback: "no_image.jpg" %>
         </div>
 
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: <%= (target_reward.kid.points.to_f / target_reward.reward.total_point.to_f) * 100  %>%" aria-valuenow="<%= target_reward.kid.points %>" aria-valuemin="0" aria-valuemax="<%= target_reward.reward.total_point %>"></div>
         </div>
-        <div class="mb-1" align="center">
+        <div class="heading mb-1">
           <%= link_to target_reward_path(target_reward), method: :delete, data: { confirm: '本当にやめますか？' } do %>
             <button class="btn btn-danger">目標をやめる</button>
           <% end %>
         </div>
-        <div align="center">
+        <div class="heading">
           <% if current_kid.points >= target_reward.reward.total_point %>
             <%= link_to reward_items_path(reward_id: target_reward.reward_id), method: :post do %>
               <button class="btn btn-success">ごほうびゲット！</button>

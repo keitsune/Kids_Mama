@@ -45,7 +45,19 @@ main {
  background-color: #FFFFCC;
 }
 
+.line {
+ background-color: white;
+}
 
+.heading {
+ text-align: center;
+}
+
+.img_200_cover{
+		width: 200px;
+		height: 200px;
+		object-fit: cover;
+		}
 
 footer {
  width: 100%;

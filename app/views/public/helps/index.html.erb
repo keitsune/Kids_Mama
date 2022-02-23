@@ -2,8 +2,8 @@
   <h2>おてつだいリスト</h2>
   <div class="row">
     <table class="table table-bordered">
-      <thead bgcolor="white">
-        <tr align="center">
+      <thead class="line">
+        <tr class="heading">
           <th>おてつだい名</th>
           <th>内容</th>
           <th>もらえるポイント</th>
@@ -11,8 +11,8 @@
         </tr>
       </thead>
       <% @helps.each do |helps| %>
-      <tbody bgcolor="white">
-        <tr align="center">
+      <tbody class="line">
+        <tr class="heading">
           <td>
             <%= helps.name %>
           </td>

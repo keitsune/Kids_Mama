@@ -4,8 +4,8 @@
   </h2>
   <div class="col-12 d-flex justify-content-center">
     <table class="table table-bordered">
-      <thead bgcolor="white">
-        <tr align="center">
+      <thead class="line">
+        <tr class="heading">
           <th>目標たっせい日</th>
           <th>画像</th>
           <th>ごほうび名</th>
@@ -13,9 +13,9 @@
           <th>ごほうび状況</th>
         </tr>
       </thead>
-      <tbody bgcolor="white">
+      <tbody class="line">
         <% @reward_items.each do |reward_item| %>
-        <tr align="center">
+        <tr class="heading">
           <td>
             <%= reward_item.updated_at.strftime('%Y/%m/%d') %>
           </td>

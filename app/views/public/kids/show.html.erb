@@ -5,17 +5,17 @@
       <table>
         <tbody>
           <tr>
-            <td align="center">
+            <td class="heading">
               <%= attachment_image_tag @kid, :image, fallback: "no_image.jpg", class: "rounded-circle", size: "120x120"%>
             </td>
           </tr>
           <tr>
-            <td align="center">
+            <td class="heading">
               <h5><%= @kid.name %></h5>
             </td>
           </tr>
           <tr>
-            <td align="center">
+            <td class="heading">
               <%= link_to edit_kids_path do %>
                 <button class="btn btn-success">へんこう</button>
               <% end %>
@@ -27,31 +27,31 @@
     <div class="col-sm-7 d-flex justify-content-center">
       <table>
         <tbody>
-          <tr align="center">
+          <tr class="heading">
             <td class="pb-3">
               <h5>もっているポイント</h5>
             </td>
           </tr>
-          <tr align="center">
+          <tr class="heading">
             <td class="pb-3">
               <h5><%= @kid.points %>ポイント</h5>
             </td>
           </tr>
-          <tr align="center">
+          <tr class="heading">
             <td class="pb-1">
               <%= link_to target_rewards_path do %>
                 <button class="btn btn-success w-100">目標ごほうび</button>
               <% end %>
             </td>
           </tr>
-          <tr align="center">
+          <tr class="heading">
             <td class="pb-1">
               <%= link_to reward_items_path do %>
                 <button class="btn btn-success w-100">ごほうびりれき</button>
               <% end %>
             </td>
           </tr>
-          <tr align="center">
+          <tr class="heading">
             <td class="pb-1">
               <%= link_to help_items_path do %>
                 <button class="btn btn-success w-100">おてつだいりれき</button>

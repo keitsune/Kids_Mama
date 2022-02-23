@@ -11,16 +11,16 @@
   </div>
   <div class="col-12 d-flex justify-content-center">
     <table class="table table-bordered">
-      <thead bgcolor="white" class="col-12">
-        <tr align="center">
+      <thead class="col-12 line">
+        <tr class="heading">
           <th class="col-3">おてつだい名</th>
           <th class="col-6">内容</th>
           <th class="col-3">もらえるポイント</th>
         </tr>
       </thead>
       <% @helps.each do |helps| %>
-      <tbody bgcolor="white">
-        <tr align="center">
+      <tbody class="line">
+        <tr class="heading">
           <td>
             <%= link_to admin_help_path(helps.id) do %>
               <%= helps.name %>
