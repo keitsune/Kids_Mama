@@ -81,6 +81,12 @@
                     <button class="btn btn-default border border-dark w-25">部屋を出る</button>
                   <% end %>
                 </li>
+              <% else %>
+                <li class="mt-1 mb-1 nav-item active">
+                  <%= link_to about_path do %>
+                    <button class="btn btn-default border border-dark w-25">使い方</button>
+                  <% end %>
+                </li>
               <% end %>
             </ul>
           </div>
