@@ -2,3 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.irasuto {
+  display: flex;
+}
+
+.irasuto-arrow {
+  line-height: inline-block;
+  font-size: 100px;
+  color: red;
+}
+
+.irasuto-box-1 {
+  width:  400px;
+  height: 300px;
+  background-image: url(132682.png);
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.irasuto-box-2 {
+  width:  400px;
+  height: 300px;
+  background-image: url(132682.png);
+  background-size: contain;
+  margin: 0 auto;
+}
