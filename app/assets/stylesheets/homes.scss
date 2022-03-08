@@ -7,9 +7,10 @@
 }
 
 .irasuto-arrow {
-  line-height: inline-block;
-  font-size: 100px;
-  color: red;
+  width: 100px;
+  height: 50px;
+  background-image: url(22426348.png);
+  background-size: contain;
 }
 
 .irasuto-box-1 {
@@ -21,9 +22,9 @@
 }
 
 .irasuto-box-2 {
-  width:  400px;
+  width:  300px;
   height: 300px;
-  background-image: url(132682.png);
+  background-image: url(1109975.png);
   background-size: contain;
   margin: 0 auto;
 }
