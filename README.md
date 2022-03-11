@@ -42,5 +42,6 @@ https://docs.google.com/spreadsheets/d/1RQGnPauLfso_hrKEMNJYh2bs7DQIonqLU1Q2I72p
 * IDE：Cloud9
 
 ## 使用素材
-* アイコン https://icooon-mono.com
+* ICOOON MONO https://icooon-mono.com
+* illust AC https://www.ac-illust.com/
 
