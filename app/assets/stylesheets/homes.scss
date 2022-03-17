@@ -4,6 +4,12 @@
 
 .irasuto {
   display: flex;
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 50px;
 }
 
 .irasuto-arrow-1 {
@@ -11,7 +17,8 @@
   height: 50px;
   margin-top: 120px;
   background-image: url(22426348.png);
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 }
 
 .irasuto-arrow-2 {
@@ -22,26 +29,32 @@
   background-size: contain;
 }
 
+.irasuto-text {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .irasuto-box-1 {
   width:  400px;
   height: 300px;
   background-image: url(132682.png);
-  background-size: contain;
-  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
 }
 
 .irasuto-box-2 {
   width:  300px;
   height: 300px;
   background-image: url(1109975.png);
-  background-size: contain;
-  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
 }
 
 .irasuto-box-3 {
   width:  250px;
   height: 190px;
   background-image: url(22246538.png);
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
 }
