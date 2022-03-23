@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   get '/about' => 'homes#about'
 
   scope module: :public do
-    resource :kids, only: [:show, :edit, :update, :unsubscribe, :withdraw]
-    get "kids/unsubscribe" => "kids#unsubscribe"
-    patch "kids/withdraw" => "kids#withdraw"
-    put "kids/withdraw" => "kids#withdraw"
+    resource :kids, only: [:show, :edit, :update, :unsubscribe, :withdraw] do
+      collection do
+        get 'unsubscribe'
+        patch 'withdraw'
+        put 'withdraw'
+      end
+    end
     resources :rewards, only: [:index, :show]
     resources :helps, only: [:index]
     resources :want_rewards, only: [:index, :create, :destroy]
